@@ -1,0 +1,163 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" width="100%" height="100%">
+  <defs>
+    <!-- Background Canvas Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B14" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+
+    <!-- Ambient Mesh Glow Spots -->
+    <radialGradient id="meshPurple" cx="30%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#6366F1" stop-opacity="0.85" />
+      <stop offset="60%" stop-color="#4F46E5" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#070B14" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="meshPink" cx="65%" cy="65%" r="55%">
+      <stop offset="0%" stop-color="#EC4899" stop-opacity="0.8" />
+      <stop offset="60%" stop-color="#DB2777" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#070B14" stop-opacity="0" />
+    </radialGradient>
+
+    <radialGradient id="meshCyan" cx="35%" cy="80%" r="50%">
+      <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.75" />
+      <stop offset="60%" stop-color="#0891B2" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#070B14" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Album Art Gradient -->
+    <linearGradient id="albumArtGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366F1" />
+      <stop offset="50%" stop-color="#EC4899" />
+      <stop offset="100%" stop-color="#06B6D4" />
+    </linearGradient>
+
+    <!-- Glassmorphic Card Background -->
+    <linearGradient id="glassCard" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#0F172A" stop-opacity="0.9" />
+    </linearGradient>
+
+    <!-- Gaussian Blur Filters -->
+    <filter id="ambientBlur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="36" result="blur" />
+    </filter>
+
+    <filter id="cardShadow" x="-20%" y="-20%" width="140%" height="145%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#000000" flood-opacity="0.6" />
+    </filter>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="800" height="420" rx="16" fill="url(#bgGrad)" />
+
+  <!-- Ambient Fluid Mesh Backdrop Layer (Simulated blurred layer) -->
+  <g filter="url(#ambientBlur)">
+    <circle cx="280" cy="180" r="160" fill="url(#meshPurple)" />
+    <circle cx="480" cy="260" r="150" fill="url(#meshPink)" />
+    <circle cx="220" cy="300" r="130" fill="url(#meshCyan)" />
+  </g>
+
+  <!-- Header Text -->
+  <text x="400" y="40" text-anchor="middle" fill="#818CF8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="800" letter-spacing="0.5">
+    ambient_backdrop_glow
+  </text>
+  <text x="400" y="64" text-anchor="middle" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13">
+    Dynamic Artwork Backdrops · OKLab Perceptual Blending · Fluid Mesh Gradients
+  </text>
+
+  <!-- Left: Media Player Glassmorphic Card -->
+  <g transform="translate(60, 88)">
+    <rect width="280" height="295" rx="22" fill="url(#glassCard)" stroke="#475569" stroke-width="1.2" stroke-opacity="0.5" filter="url(#cardShadow)" />
+
+    <!-- Album Art Cover -->
+    <rect x="24" y="20" width="232" height="150" rx="14" fill="url(#albumArtGrad)" />
+    <circle cx="140" cy="95" r="28" fill="#FFFFFF" fill-opacity="0.25" />
+    <path d="M 134,83 L 152,95 L 134,107 Z" fill="#FFFFFF" />
+
+    <!-- Track Info -->
+    <text x="24" y="200" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="16" font-weight="700">
+      Midnight Horizon
+    </text>
+    <text x="24" y="218" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12">
+      Luna Waves · Ambient Chill
+    </text>
+
+    <!-- Progress Bar -->
+    <rect x="24" y="236" width="232" height="4" rx="2" fill="#334155" />
+    <rect x="24" y="236" width="140" height="4" rx="2" fill="#818CF8" />
+    <circle cx="164" cy="238" r="5" fill="#FFFFFF" />
+
+    <!-- Mini Controls -->
+    <g transform="translate(140, 268)">
+      <circle cx="-50" cy="0" r="12" fill="#334155" />
+      <path d="M -54,-4 L -47,0 L -54,4 Z" fill="#FFFFFF" transform="rotate(180 -50 0)" />
+
+      <circle cx="0" cy="0" r="16" fill="#FFFFFF" />
+      <path d="M -3,-6 L 6,0 L -3,6 Z" fill="#0F172A" />
+
+      <circle cx="50" cy="0" r="12" fill="#334155" />
+      <path d="M 47,-4 L 54,0 L 47,4 Z" fill="#FFFFFF" />
+    </g>
+  </g>
+
+  <!-- Right: Architecture & Capabilities Card -->
+  <g transform="translate(370, 88)">
+    <rect width="370" height="295" rx="22" fill="url(#glassCard)" stroke="#475569" stroke-width="1.2" stroke-opacity="0.5" filter="url(#cardShadow)" />
+
+    <text x="24" y="34" fill="#F8FAFC" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="15" font-weight="700">
+      Engine Architecture &amp; Features
+    </text>
+
+    <!-- Item 1: OKLab vs sRGB -->
+    <g transform="translate(24, 60)">
+      <rect width="322" height="52" rx="10" fill="#0F172A" stroke="#334155" stroke-width="1" />
+      <circle cx="20" cy="26" r="10" fill="#6366F1" fill-opacity="0.2" />
+      <text x="20" y="30" text-anchor="middle" fill="#818CF8" font-size="11" font-weight="bold">OK</text>
+      <text x="40" y="22" fill="#E2E8F0" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="600">
+        OKLab Perceptual Color Blending
+      </text>
+      <text x="40" y="38" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10">
+        Eliminates muddy gray midtones during image cross-fades
+      </text>
+    </g>
+
+    <!-- Item 2: Sub-4ms Color Extractor -->
+    <g transform="translate(24, 122)">
+      <rect width="322" height="52" rx="10" fill="#0F172A" stroke="#334155" stroke-width="1" />
+      <circle cx="20" cy="26" r="10" fill="#EC4899" fill-opacity="0.2" />
+      <text x="20" y="30" text-anchor="middle" fill="#F472B6" font-size="11" font-weight="bold">⚡</text>
+      <text x="40" y="22" fill="#E2E8F0" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="600">
+        Sub-4ms Palette Extraction
+      </text>
+      <text x="40" y="38" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10">
+        Downsamples to 24×24 + 3D quantization with 0 FPS drops
+      </text>
+    </g>
+
+    <!-- Item 3: 4 Ambient Modes -->
+    <g transform="translate(24, 184)">
+      <rect width="322" height="52" rx="10" fill="#0F172A" stroke="#334155" stroke-width="1" />
+      <circle cx="20" cy="26" r="10" fill="#06B6D4" fill-opacity="0.2" />
+      <text x="20" y="30" text-anchor="middle" fill="#22D3EE" font-size="11" font-weight="bold">🎨</text>
+      <text x="40" y="22" fill="#E2E8F0" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="600">
+        4 Built-in Ambient Modes
+      </text>
+      <text x="40" y="38" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10">
+        Mesh (Fluid Harmonic), Radial, Aurora Wave &amp; Spotlight
+      </text>
+    </g>
+
+    <!-- Footer Badges -->
+    <g transform="translate(24, 256)">
+      <rect width="96" height="22" rx="6" fill="#1E293B" stroke="#334155" />
+      <text x="48" y="15" text-anchor="middle" fill="#A5B4FC" font-size="10" font-weight="600">6 Platforms</text>
+
+      <rect x="106" width="96" height="22" rx="6" fill="#1E293B" stroke="#334155" />
+      <text x="154" y="15" text-anchor="middle" fill="#A5B4FC" font-size="10" font-weight="600">Zero C++</text>
+
+      <rect x="212" width="110" height="22" rx="6" fill="#1E293B" stroke="#334155" />
+      <text x="267" y="15" text-anchor="middle" fill="#A5B4FC" font-size="10" font-weight="600">Pure Flutter</text>
+    </g>
+  </g>
+</svg>

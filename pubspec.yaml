@@ -1,0 +1,24 @@
+name: ambient_backdrop_glow
+description: "Dynamic ambient background glow and fluid animated mesh gradients from image artwork with OKLab color blending for Flutter."
+version: 1.0.0
+homepage: https://github.com/govindtank/ambient_backdrop_glow
+repository: https://github.com/govindtank/ambient_backdrop_glow
+topics:
+  - ambient-light
+  - mesh-gradient
+  - backdrop
+  - media-player
+  - custom-painter
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+  flutter: '>=3.10.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
