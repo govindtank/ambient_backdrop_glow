@@ -1,6 +1,6 @@
 name: ambient_backdrop_glow
 description: "Dynamic ambient background glow and fluid animated mesh gradients from image artwork with OKLab color blending for Flutter."
-version: 1.0.0
+version: 1.1.0
 homepage: https://github.com/govindtank/ambient_backdrop_glow
 repository: https://github.com/govindtank/ambient_backdrop_glow
 topics:
@@ -9,6 +9,14 @@ topics:
   - backdrop
   - media-player
   - custom-painter
+
+platforms:
+  android:
+  ios:
+  linux:
+  macos:
+  windows:
+  web:
 
 environment:
   sdk: '>=3.0.0 <4.0.0'

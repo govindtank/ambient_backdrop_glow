@@ -1,3 +1,11 @@
+## 1.1.0
+
+* Added `enablePulse` in `AmbientGlowStyle` for organic breathing animations.
+* Added `borderRadius` on `AmbientBackdropGlow` for rounded container clipping.
+* Added explicit `platforms` declaration (Android, iOS, Web, macOS, Windows, Linux).
+
+## 1.0.0 Added `platforms` declaration (android, ios, linux, macos, windows, web).
+
 ## 1.0.0
 
 * Initial stable release of `ambient_backdrop_glow`.

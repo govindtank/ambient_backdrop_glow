@@ -132,6 +132,9 @@ class AmbientGlowStyle {
   /// Opacity of the tint layer in `[0.0, 1.0]`.
   final double tintOpacity;
 
+  /// Whether to add subtle rhythmic breathing/pulsing animation.
+  final bool enablePulse;
+
   /// Creates an [AmbientGlowStyle].
   const AmbientGlowStyle({
     this.blurSigma = 50.0,
@@ -140,6 +143,7 @@ class AmbientGlowStyle {
     this.speed = 1.0,
     this.tintColor,
     this.tintOpacity = 0.15,
+    this.enablePulse = false,
   })  : assert(blurSigma >= 0, 'blurSigma must be non-negative'),
         assert(intensity >= 0 && intensity <= 1.0,
             'intensity must be in [0.0, 1.0]');
@@ -152,6 +156,7 @@ class AmbientGlowStyle {
     double? speed,
     Color? tintColor,
     double? tintOpacity,
+    bool? enablePulse,
   }) {
     return AmbientGlowStyle(
       blurSigma: blurSigma ?? this.blurSigma,
@@ -160,6 +165,7 @@ class AmbientGlowStyle {
       speed: speed ?? this.speed,
       tintColor: tintColor ?? this.tintColor,
       tintOpacity: tintOpacity ?? this.tintOpacity,
+      enablePulse: enablePulse ?? this.enablePulse,
     );
   }
 
@@ -172,7 +178,8 @@ class AmbientGlowStyle {
         other.spread == spread &&
         other.speed == speed &&
         other.tintColor == tintColor &&
-        other.tintOpacity == tintOpacity;
+        other.tintOpacity == tintOpacity &&
+        other.enablePulse == enablePulse;
   }
 
   @override
@@ -183,5 +190,6 @@ class AmbientGlowStyle {
         speed,
         tintColor,
         tintOpacity,
+        enablePulse,
       );
 }

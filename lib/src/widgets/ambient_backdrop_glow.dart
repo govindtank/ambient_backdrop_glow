@@ -22,7 +22,7 @@ class AmbientBackdropGlow extends StatefulWidget {
   /// The glow rendering style (mesh, radial, aurora, spotlight).
   final AmbientGlowMode mode;
 
-  /// Visual styling configuration (blur, intensity, spread, speed).
+  /// Visual styling configuration (blur, intensity, spread, speed, pulse).
   final AmbientGlowStyle style;
 
   /// Duration for smooth color cross-fades when artwork changes.
@@ -33,6 +33,9 @@ class AmbientBackdropGlow extends StatefulWidget {
 
   /// Optional overlay widget (e.g. glassmorphism filter, gradient scrim).
   final Widget? overlay;
+
+  /// Optional border radius for rounded clipping.
+  final BorderRadius? borderRadius;
 
   /// Optional fixed width.
   final double? width;
@@ -51,6 +54,7 @@ class AmbientBackdropGlow extends StatefulWidget {
     this.crossFadeDuration = const Duration(milliseconds: 800),
     this.child,
     this.overlay,
+    this.borderRadius,
     this.width,
     this.height,
   });
@@ -166,7 +170,7 @@ class _AmbientBackdropGlowState extends State<AmbientBackdropGlow>
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
+    Widget content = SizedBox(
       width: widget.width,
       height: widget.height,
       child: Stack(
@@ -178,15 +182,22 @@ class _AmbientBackdropGlowState extends State<AmbientBackdropGlow>
             builder: (context, child) {
               final double phase =
                   _motionController.value * 2 * math.pi * widget.style.speed;
+              final double pulseMultiplier = widget.style.enablePulse
+                  ? 1.0 + 0.15 * math.sin(phase * 2)
+                  : 1.0;
+              final effectiveStyle = widget.style.copyWith(
+                intensity: (widget.style.intensity * pulseMultiplier).clamp(0.0, 1.0),
+              );
+
               final CustomPainter painter = widget.mode == AmbientGlowMode.mesh
                   ? MeshGlowPainter(
                       palette: _currentPalette,
-                      style: widget.style,
+                      style: effectiveStyle,
                       phase: phase,
                     )
                   : RadialGlowPainter(
                       palette: _currentPalette,
-                      style: widget.style,
+                      style: effectiveStyle,
                       mode: widget.mode,
                       phase: phase,
                     );
@@ -216,5 +227,14 @@ class _AmbientBackdropGlowState extends State<AmbientBackdropGlow>
         ],
       ),
     );
+
+    if (widget.borderRadius != null) {
+      content = ClipRRect(
+        borderRadius: widget.borderRadius!,
+        child: content,
+      );
+    }
+
+    return content;
   }
 }
