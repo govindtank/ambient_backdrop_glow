@@ -186,7 +186,8 @@ class _AmbientBackdropGlowState extends State<AmbientBackdropGlow>
                   ? 1.0 + 0.15 * math.sin(phase * 2)
                   : 1.0;
               final effectiveStyle = widget.style.copyWith(
-                intensity: (widget.style.intensity * pulseMultiplier).clamp(0.0, 1.0),
+                intensity:
+                    (widget.style.intensity * pulseMultiplier).clamp(0.0, 1.0),
               );
 
               final CustomPainter painter = widget.mode == AmbientGlowMode.mesh
