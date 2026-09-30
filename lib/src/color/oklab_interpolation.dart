@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 /// Unlike naive sRGB interpolation (which produces muddy gray mid-tones),
 /// OKLab preserves constant perceived lightness and chromatic vibrancy.
 class OkLab {
-  /// Converts an sRGB color component in [0, 1] to linear RGB.
+  /// Converts an sRGB color component in `0, 1` to linear RGB.
   static double sRgbToLinear(double c) {
     if (c <= 0.04045) {
       return c / 12.92;
@@ -14,7 +14,7 @@ class OkLab {
     return math.pow((c + 0.055) / 1.055, 2.4).toDouble();
   }
 
-  /// Converts a linear RGB component in [0, 1] to sRGB.
+  /// Converts a linear RGB component in `0, 1` to sRGB.
   static double linearToSRgb(double c) {
     final double clamped = c.clamp(0.0, 1.0);
     if (clamped <= 0.0031308) {

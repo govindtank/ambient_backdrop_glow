@@ -16,3 +16,7 @@
 * Added full customization for blur sigma, intensity, speed, spread, and color tints.
 * Added interactive example application with media player mockup and live parameter sliders.
 * 100% test coverage and zero pub.dev warnings.
+
+## 1.1.1
+
+* Fix dartdoc warnings preventing max pub.dev score.
