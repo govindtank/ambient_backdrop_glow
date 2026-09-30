@@ -193,3 +193,30 @@ class AmbientGlowStyle {
         enablePulse,
       );
 }
+
+/// Ready-to-use ambient backdrop palettes for popular media moods.
+class AmbientPresets {
+  /// Cyberpunk neon palette (Magenta + Cyan).
+  static const AmbientColorPalette cyberpunk = AmbientColorPalette(
+    primary: Color(0xFFFF007F),
+    secondary: Color(0xFF00F0FF),
+    accent: Color(0xFF7000FF),
+    background: Color(0xFF0A0A12),
+  );
+
+  /// Sunset acoustic palette (Deep Orange + Amber).
+  static const AmbientColorPalette sunset = AmbientColorPalette(
+    primary: Color(0xFFFF5E36),
+    secondary: Color(0xFFFFAE33),
+    accent: Color(0xFFE02475),
+    background: Color(0xFF140D0E),
+  );
+
+  /// Emerald forest ambient mood (Emerald + Mint).
+  static const AmbientColorPalette emerald = AmbientColorPalette(
+    primary: Color(0xFF10B981),
+    secondary: Color(0xFF06B6D4),
+    accent: Color(0xFF34D399),
+    background: Color(0xFF061A14),
+  );
+}

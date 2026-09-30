@@ -20,3 +20,8 @@
 ## 1.1.1
 
 * Fix dartdoc warnings preventing max pub.dev score.
+
+## 1.1.2
+
+* Added `AmbientPresets` (cyberpunk, sunset, emerald mood palettes).
+* Automated pub.dev OIDC deployment.
