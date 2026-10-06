@@ -1,16 +1,12 @@
 # ambient_backdrop_glow
 
-[![Pub Version](https://img.shields.io/pub/v/ambient_backdrop_glow.svg?style=flat-square&color=blue)](https://pub.dev/packages/ambient_backdrop_glow)
-[![Pub Points](https://img.shields.io/pub/points/ambient_backdrop_glow?style=flat-square&color=2E8B57&label=pub%20points)](https://pub.dev/packages/ambient_backdrop_glow/score)
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Try%20In%20Browser-00ff88?style=flat-square&logo=flutter)](https://govindtank.github.io/ambient_backdrop_glow/)
-[![Pub Likes](https://img.shields.io/pub/likes/ambient_backdrop_glow?style=flat-square)](https://pub.dev/packages/ambient_backdrop_glow)
-[![CI](https://github.com/govindtank/ambient_backdrop_glow/actions/workflows/ci.yml/badge.svg)](https://github.com/govindtank/ambient_backdrop_glow/actions)
-[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg?style=flat-square)](LICENSE)
-
-A dynamic, GPU-accelerated Flutter package for generating **ambient backdrops**, **fluid mesh gradients**, and **artwork backlights** with perceptual **OKLab color blending** and sub-4ms palette extraction.
-
 <p align="center">
-  <img src="https://raw.githubusercontent.com/govindtank/ambient_backdrop_glow/main/screenshot.svg" width="750" alt="ambient_backdrop_glow demo"/>
+  <a href="https://pub.dev/packages/ambient_backdrop_glow"><img src="https://img.shields.io/pub/v/ambient_backdrop_glow.svg?style=flat-square&color=blue" alt="Pub Version"></a>
+  <a href="https://pub.dev/packages/ambient_backdrop_glow/score"><img src="https://img.shields.io/pub/points/ambient_backdrop_glow?style=flat-square&color=2E8B57&label=pub%20points" alt="Pub Points"></a>
+  <a href="https://govindtank.github.io/ambient_backdrop_glow/"><img src="https://img.shields.io/badge/Live%20Demo-Try%20In%20Browser-00ff88?style=flat-square&logo=flutter" alt="Live Demo"></a>
+  <a href="https://pub.dev/packages/ambient_backdrop_glow"><img src="https://img.shields.io/pub/likes/ambient_backdrop_glow?style=flat-square" alt="Pub Likes"></a>
+  <a href="https://github.com/govindtank/ambient_backdrop_glow/actions"><img src="https://github.com/govindtank/ambient_backdrop_glow/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache%202.0-blue.svg?style=flat-square" alt="License"></a>
 </p>
 
 ---
